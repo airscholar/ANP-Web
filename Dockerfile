@@ -1,4 +1,7 @@
 FROM nginx:alpine
-WORKDIR /ANP
-ADD . .
+WORKDIR /app
+COPY . /usr/share/nginx/html/
+RUN chmod -R 755 /usr/share/nginx/html/
+
+
 
